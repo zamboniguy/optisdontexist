@@ -1,4 +1,5 @@
-# BOPPER TING aka #OptisDontExist by fri-end 
+# BOPPER TING aka #OptisDontExist by fri-end
+**Most code is not mine. Most of the code is others and I have just combined it all into one project. I have tried to include a reference to all code that I have used.**
 Feeling kind of cute. Might release. Might not.
 
 /shrug
