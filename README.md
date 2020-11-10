@@ -1,4 +1,7 @@
 # BOPPER TING aka #OptisDontExist by fri-end
+
+![](https://i.imgur.com/dxdXEFA.png)
+
 **Most code is not mine. Most of the code is others and I have just combined it all into one project. I have tried to include a reference to all code that I have used.**
 
 Feeling kind of cute. Might release. Might not.
@@ -18,51 +21,125 @@ Feeling kind of cute. Might release. Might not.
     - Inject dll
 - Use the "F5" key to open and hide the menu
 
+# FEATURES - Work in progress
+- Keybinds...
+- Strafe Optimizer...
+- etc
+
 # CHANGE LOG
-## Version 0.4/0.45:
+## Version 0.4:
 - Change color scheme
 - [REDACTED]
 
-## Version 0.5 (CURRENT BUILD):
+## Version 0.5:
 - Added start speed slider (240-290 u/s)
 
-- Replaced hardcoded mouse sensitivity and m_yaw with convars
+- Replaced hard-coded mouse sensitivity and m_yaw with convars
 
-## Version 0.6:
-- Add keybinds... nulls, shsw, sideways key swap, and w key prevention
-- Add slider to add delay to strafe (0 ticks - 5 ticks) and randomize "perfect" strafes 
-- Add spectator list (Osiris???)
-- Add sound modifier (Osiris???) (Remove things such as chicken noise or map music)
+## Version 0.6 **(CURRENT BUILD)**:
+---
+- Added spectator list
+- Added keybinds... nulls, shsw, sideways key swap, and w key prevention
+- Added push and hold button ('W' key)
+- Added speed change option to reduce the strength of the optimizer as the player progresses
+    - Threshold speed to start decreasing strength
+    - Multiplier to decrease speed
+    - **STILL NEEDS SOME WORK (E.G. Smoothing)**
+    - **RESET COUNTER WITH SPACE BAR**
+- Added option to set speed change to a jump number (e.g. change speed after 6th jump)
+- Added movement recorder
+    - When left mouse button and E pressed we remove ending of the playing record
+    - When right mouse button and E pressed we remove ending of the playing record and instantly start recording
+    - https://www.unknowncheats.me/forum/2617364-post1.html
+- Add spectator list color slider and x/y mover (Get screen width/height)
+- Add sound notification for each spectator (One spec = one sound, Two spec = two sounds...) (Osiris???)
 
 - Modified slider values to read from left to right instead of right to left.
+
+## Version 0.6.1:
+- Loader, Updater, etc:
+    - https://stackoverflow.com/questions/2030847/best-way-to-read-a-large-file-into-a-byte-array-in-c
+    - https://www.youtube.com/results?search_query=how+to+make+a+dll+injector
+    - https://github.com/Dewera/Lunar
+    - https://www.youtube.com/watch?v=CAkRsmhO2FI
+    - https://www.unknowncheats.me/forum/programming-for-beginners/270101-own-private-undetected-injector-coding.html
+    - https://www.unknowncheats.me/forum/c-/82629-basic-dll-injector.html
+    - https://github.com/quikk1/console-loader-base
+    - https://www.youtube.com/watch?v=zfa0JWNyxd0
+    - https://github.com/btbd/smap
+
+    - "c# auto update with github version"
+    - https://github.com/Klocman/UpdateSystem
+    - https://github.com/Tyrrrz/Onova
+
+## Version 0.6.2:
+- Add on screen indicators for what cheats are enabled
+    - Such as text above spectators list showing enabled cheats
+- Add rainbow color toggle for text
+- Add toggle on/off feature for strafe optimizer
+
+- Add sound modifier (Osiris???) (Remove things such as chicken noise or map music)
+- Add silent strafer
+
 - Modify auto bhop... simulate more jump presses (mimic actual scroll) + randomized number of jumps
-- Modify auto strafe... Something else instead of sidemove (to be more "legit")
-- Modify optimizer... stop opimizing if little mouse movement
-- Modify optimizer... stop optimizing if too much mouse movement... such as past ideal strafe
+
+## Version 0.6.3
+- Bug fixes
+- Add optimizer stop if significant speed decrease (E.g. 100 u/s or 1/10th of playerVelocity)
+
+- Small graphical improvements
+    - Make menu smaller in y direction... maybe x too
+    - Generally take away most unused space
+
+## Version 0.6.4
+- Add key change options (E.g. change toggle on/off key to user preference).
+- **EXPECTED BETA VERSION**
+
+## Version 0.6.5
+- **EXPECTED LAUNCH VERSION**
 
 ## Version 0.7:
+- Add slider to add delay to strafe (0 ticks - 5 ticks) and randomize "perfect" strafes 
 - Add bash 2 style deviation recorder + warn player function
-- Add optional name/clantag changer
-- Add toggle/press to hold key option
+- Add optional name/clan-tag changer
 - Add option to remove pause between strafes (always moving left or right)
+- Add option for progressive speed change (speed_change_speed / playerVelocity)
+    - Or constant value (speed_change_multipler / 100... 0%-100%)
 
-- Modify optimizer... different ideal strafe calculation
+- Modify optimizer... stop optimizing if little mouse movement
+    - Modify optimizer... stop optimizing if too much mouse movement... such as past ideal strafe
+    - https://www.unknowncheats.me/forum/2880560-post25.html
 
 ## Version 0.8:
-- Support for other styles such as sideways
-- Fake backwards and fake sideways
-    - just add 180 or so to cmd->viewangles.y and when enabling / disabling lerp the added angle so it looks legit?
+- Add support for other styles such as sideways
+- Add provisions to prevent "opti break" that occurs when hitting a wall or surfing
+- Add fake backwards and fake sideways
+    - "just add 180 or so to cmd->viewangles.y and when enabling / disabling lerp the added angle so it looks legit"
     - https://www.unknowncheats.me/forum/2654670-post2.html
     - https://github.com/McSwaggens/DingoSquad/blob/master/src/AntiAim.cpp
 
+- Modify optimizer... different ideal strafe calculation
+    - https://www.unknowncheats.me/forum/counterstrike-global-offensive/356497-multidirectional-autostrafer.html
+    - https://www.unknowncheats.me/forum/counterstrike-global-offensive/257614-proper-autobhop-100-gain-strafer.html
+- Modify auto strafe... Something else instead of side-move (to be more "legit")
+
 ## Version 0.9:
-- Movement recorder
+- Complete GUI revamp
+    - https://github.com/raysan5/raygui
+- Remove junk code such as unused csgo offsets
+- File signature modification on launch...
+    - "Any change (such as adding a new line or space) to source produces different hash"
+    - Google: "file signature site:unknowncheats.me"
+    - Add polymorphic code engine?
 
 ## Version 1.0:
-- Complete GUI revamp
-- Remove junk code such as unused csgo offsets
+- Add text color options:
+    - Rainbow?
+    - Environment aware?
+        - Change text color to a color that is complementary to the area behind the text
+- Release source code?
 
-# Miscellanous links:
+# Miscellaneous links:
 - [STEAM ID FINDER](https://steamid.io/)
 
 - [Source smallest normalize function](https://www.unknowncheats.me/forum/counterstrike-global-offensive/166415-normalize-function.html)
