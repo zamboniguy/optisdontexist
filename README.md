@@ -1,7 +1,7 @@
 # #OptisDontExist
 A tool for learning to strafe and analyzing player data in Counter-Strike: Global Offensive (possibly Counter-Strike: Source in the future).
 
-![](https://images2.imgbox.com/69/24/6n5JACBJ_o.png)
+![](https://raw.githubusercontent.com/zamboniguy/optisdontexist/main/optisdontexist.png)
 
 
 ## [Table of Contents](#table-of-contents)
